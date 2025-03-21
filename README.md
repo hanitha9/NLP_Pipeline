@@ -33,7 +33,6 @@ The script processes a sample input and outputs the results in JSON format, foll
 # Implementation Details
 
    # Steps
-```
 Preprocessing (clean_text())
 Removes special characters (except ., ,, !, ?) and normalizes spaces.
 Stop word removal is optional and disabled to preserve task context (e.g., "has," "should").
@@ -47,7 +46,7 @@ Clusters tasks using K-means (max 4 clusters).
 Aligns clusters to categories ("Chores," "Errands," "Work/Studies," "Meetings") with a heuristic based on task content.
 Output
 Returns a JSON structure with tasks, persons, deadlines, categories, and embeddings.
-```
+
 # Sample Input
 text = """Rahul wakes up early every day. He goes to college in the morning and comes back at 3 pm.
 At present, Rahul is outside. He has to buy the snacks for all of us. Rahul should clean the room by 5 pm today."""
@@ -80,30 +79,5 @@ Stop Word Removal: Enabling it removed key words like "has," breaking task detec
 Category Swapping: Initial K-means clustering swapped categories (e.g., "buy" as "Chores"). Fixed with a heuristic to align clusters with task content.
 Pronoun Resolution: Tracking the last person (e.g., "Rahul" for "He") was challenging but effective with a last_person variable.
 Balancing Preprocessing: Ensuring preprocessing didn’t disrupt task extraction was a key challenge.
-# License
-This project is for educational purposes and adheres to the assignment guidelines.
 
----
 
-### How to Use
-1. **Copy the Entire Block**: Copy the text above into your clipboard.
-2. **Split into Files**:
-   - **For `part_a_solution.py`**:
-     - Paste the content into a text editor.
-     - Delete everything from `# ---END-OF-PART-A-SOLUTION---` onward.
-     - Save as `part_a_solution.py`.
-   - **For `README.md`**:
-     - Paste the content again into a new file.
-     - Delete everything up to and including `# ---END-OF-PART-A-SOLUTION---`.
-     - Remove `# ---END-OF-README---` at the end.
-     - Save as `README.md`.
-3. **Run and Submit**:
-   - Follow the instructions in the `README.md` to install dependencies and execute the script.
-
----
-
-### Verification
-- The Python script is identical to the final version provided earlier for Part A.
-- The `README.md` matches the documentation previously generated, formatted for one-time copying.
-
-This format ensures you can copy everything at once and split it easily. Let me know if you need help with Part B’s `README.md` or anything else! You’re ready to finalize your Part A submission.
